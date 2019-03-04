@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>To Do List...</title>
+<link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -40,10 +42,19 @@
                 <input type="text" id="user_intro" name="user_intro">
             </div>
             <div class="form-group">
-            <button type="button" class="btn btn-success">JOIN</button>
-            <button type="button" class="btn btn-warning">LOGIN</button>
+            <a href="/" type="button" class="btn btn-success">Cancel</a>
+            <button type="button" class="btn btn-warning">Submit</button>
             </div>
         </form>
     </div>
 </body>
+<script>
+
+	$(document).ready("onclick", function(){
+		
+		
+		
+	});
+
+</script>
 </html>
