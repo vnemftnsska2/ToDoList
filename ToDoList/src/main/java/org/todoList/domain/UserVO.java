@@ -5,6 +5,7 @@ public class UserVO {
 	private String user_id;
 	private String user_pw;
 	private String user_name;
+	private String user_email;
 	private int user_age;
 	private String user_gender;
 	private String user_job;
@@ -32,6 +33,14 @@ public class UserVO {
 
 	public void setUser_name(String user_name) {
 		this.user_name = user_name;
+	}
+
+	public String getUser_email() {
+		return user_email;
+	}
+
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
 	}
 
 	public int getUser_age() {
@@ -68,9 +77,9 @@ public class UserVO {
 
 	@Override
 	public String toString() {
-		return "UserVO [user_id=" + user_id + ", user_pw=" + user_pw + ", user_name=" + user_name + ", user_age="
-				+ user_age + ", user_gender=" + user_gender + ", user_job=" + user_job + ", user_intro=" + user_intro
-				+ "]";
+		return "UserVO [user_id=" + user_id + ", user_pw=" + user_pw + ", user_name=" + user_name + ", user_email="
+				+ user_email + ", user_age=" + user_age + ", user_gender=" + user_gender + ", user_job=" + user_job
+				+ ", user_intro=" + user_intro + "]";
 	}
 
 }
