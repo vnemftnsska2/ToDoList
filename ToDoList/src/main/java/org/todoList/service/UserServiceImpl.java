@@ -18,5 +18,13 @@ public class UserServiceImpl implements UserService {
 		userDao.joinMember(vo);
 	}
 
+	@Override
+	public String userLoginService(String user_id, String user_pw) throws Exception {
+
+		
+		
+		return null;
+	}
+
 	
 }

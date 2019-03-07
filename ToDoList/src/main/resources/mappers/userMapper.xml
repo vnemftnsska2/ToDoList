@@ -2,7 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.todoList.mapper.UserMapper">
 
+	<!-- 회원가입 입력 정보 insert -->
 	<insert id="joinMember">
-		insert into tbl_user values (#{user_id}, #{user_pw}, #{user_name}, #{user_email}, #{user_age}, #{user_gender}, #{user_job}, #{user_intro})
+		insert into tbl_user (user_id, user_pw, user_name, user_email)values (#{user_id}, #{user_pw}, #{user_name}, #{user_email})
 	</insert>
+	
+	<!-- login 정보 가져오기 -->
+	<select id="userLogin" resultType="UserVO">
+		select * user_pw from tbl_user where user_id = #{user_id}
+	</select>
+	
+	
+	
 </mapper>

@@ -19,5 +19,13 @@ public class UserDAOImpl implements UserDAO {
 		sqlSession.insert(namespace + ".joinMember", vo);
 	}
 
+	@Override
+	public void userLogin(String user_id) throws Exception {
+		
+		// 유효성 검사는 service에서 처리하고 user_id 값만 넘기고,
+		// user_id와 일치하는 데이터의 모든 정보를 가져온다.
+		sqlSession.selectOne(namespace + ".userLogin", user_id);
+	}
+
 	
 }

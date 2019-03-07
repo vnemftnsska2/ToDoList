@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.todoList.domain.UserVO;
 import org.todoList.service.UserService;
 
@@ -46,6 +47,19 @@ public class UserController {
 		service.joinMemerService(vo);
 		
 		return "redirect:/";
+	}
+	
+	// 로그인 버튼
+	@RequestMapping(value = "/", method = RequestMethod.POST)
+	public String userLoginSuccess(@RequestParam("user_id")String user_id,
+			@RequestParam("user_pw")String user_pw) throws Exception{
+		
+		// id / pw 값 넘어오는지  확인
+		System.out.println("아이디 / 패스워드" + user_id + " / " + user_pw);
+		
+		//
+		
+		return "toDoList/list_main";
 	}
 	
 }
