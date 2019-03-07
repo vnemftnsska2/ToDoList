@@ -26,10 +26,6 @@ public class DAOTest {
 		vo.setUser_pw("1234");
 		vo.setUser_name("문경원");
 		vo.setUser_email("http://blog.naver.com/vnemftnsska2");
-		vo.setUser_age(33);
-		vo.setUser_gender("남자");
-		vo.setUser_job("취준생");
-		vo.setUser_intro("순남이 주인입니다.");
 		
 		dao.joinMember(vo);
 	}

@@ -7,5 +7,5 @@ public interface UserService {
 	
 	public void joinMemerService(UserVO vo) throws Exception;
 	
-	public String userLoginService(LoginDTO dto) throws Exception;
+	public UserVO userLoginService(LoginDTO dto) throws Exception;
 }

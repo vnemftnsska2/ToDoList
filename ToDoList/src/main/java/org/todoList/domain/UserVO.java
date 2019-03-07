@@ -1,15 +1,15 @@
 package org.todoList.domain;
 
+import java.util.Date;
+
 public class UserVO {
 
 	private String user_id;
 	private String user_pw;
 	private String user_name;
 	private String user_email;
-	private int user_age;
-	private String user_gender;
-	private String user_job;
-	private String user_intro;
+	private Date user_logdate;
+	private Date user_regdate;
 
 	public String getUser_id() {
 		return user_id;
@@ -43,43 +43,26 @@ public class UserVO {
 		this.user_email = user_email;
 	}
 
-	public int getUser_age() {
-		return user_age;
+	public Date getUser_logdate() {
+		return user_logdate;
 	}
 
-	public void setUser_age(int user_age) {
-		this.user_age = user_age;
+	public void setUser_logdate(Date user_logdate) {
+		this.user_logdate = user_logdate;
 	}
 
-	public String getUser_gender() {
-		return user_gender;
+	public Date getUser_regdate() {
+		return user_regdate;
 	}
 
-	public void setUser_gender(String user_gender) {
-		this.user_gender = user_gender;
-	}
-
-	public String getUser_job() {
-		return user_job;
-	}
-
-	public void setUser_job(String user_job) {
-		this.user_job = user_job;
-	}
-
-	public String getUser_intro() {
-		return user_intro;
-	}
-
-	public void setUser_intro(String user_intro) {
-		this.user_intro = user_intro;
+	public void setUser_regdate(Date user_regdate) {
+		this.user_regdate = user_regdate;
 	}
 
 	@Override
 	public String toString() {
 		return "UserVO [user_id=" + user_id + ", user_pw=" + user_pw + ", user_name=" + user_name + ", user_email="
-				+ user_email + ", user_age=" + user_age + ", user_gender=" + user_gender + ", user_job=" + user_job
-				+ ", user_intro=" + user_intro + "]";
+				+ user_email + ", user_logdate=" + user_logdate + ", user_regdate=" + user_regdate + "]";
 	}
 
 }
