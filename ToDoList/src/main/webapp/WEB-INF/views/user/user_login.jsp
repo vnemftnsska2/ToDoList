@@ -14,7 +14,7 @@
 	<div class="container">
 		<h1>ToDoList</h1>
 		<div class="container">
-			<form method="post">
+			<form action="MainPage" method="post">
 				<div class="form-group">
 					<label for="user_id">아이디</label> <input type="text" id="user_id" name="user_id" required>
 				</div>

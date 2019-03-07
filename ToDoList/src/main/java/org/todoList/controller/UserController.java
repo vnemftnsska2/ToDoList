@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.todoList.domain.LoginDTO;
 import org.todoList.domain.UserVO;
 import org.todoList.service.UserService;
 
@@ -50,14 +50,18 @@ public class UserController {
 	}
 	
 	// 로그인 버튼
-	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public String userLoginSuccess(@RequestParam("user_id")String user_id,
-			@RequestParam("user_pw")String user_pw) throws Exception{
+	@RequestMapping(value = "/MainPage", method = RequestMethod.POST)
+	public String userLoginSuccess(LoginDTO dto) throws Exception{
 		
 		// id / pw 값 넘어오는지  확인
-		System.out.println("아이디 / 패스워드" + user_id + " / " + user_pw);
+		System.out.println("아이디 / 패스워드 : " + dto.getUser_id() + " / " + dto.getUser_pw());
 		
-		//
+		// 1. Service 클래스로 넘겨서 유효성 검사할 예정
+		// 2. 쿠키 검사를 위해(화면에서 전달되는 데이터 전송 받기 위해) DTD 설계
+		service.userLoginService(dto);
+		
+		// 3. 만약 유효성 검사 결과가 일치하지 않는다면,
+		// HttpServletResponse 객체를 이용해 화면에 경고 띄워줌.
 		
 		return "toDoList/list_main";
 	}

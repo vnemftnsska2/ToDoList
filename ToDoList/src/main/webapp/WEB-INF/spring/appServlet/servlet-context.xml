@@ -29,6 +29,15 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
+	<!-- Login 처리를 위한 Interceptor 설정 -->
+	<beans:bean id="loginInterceptor" class="org.todoList.interceptor.LoginInterceptor"></beans:bean>
+	<interceptors>
+		<interceptor>
+			<mapping path="/user/loginPost"/>
+			<beans:ref bean="loginInterceptor"/>
+		</interceptor>
+	</interceptors>
+
 	<context:component-scan	base-package="org.todoList.controller" />
 
 

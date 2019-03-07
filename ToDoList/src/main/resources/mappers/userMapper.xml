@@ -9,9 +9,13 @@
 	
 	<!-- login 정보 가져오기 -->
 	<select id="userLogin" resultType="UserVO">
-		select * user_pw from tbl_user where user_id = #{user_id}
+		select * user_pw from tbl_user where user_id = #{user_id} and user_pw = #{user_pw}
 	</select>
 	
+	<!-- logdate 최근 login 날짜로 수정 -->
+	<update id="userRogDate">
+		update tbl_user set user_logdate = now() where user_id = #{user_id}
+	</update>
 	
 	
 </mapper>
