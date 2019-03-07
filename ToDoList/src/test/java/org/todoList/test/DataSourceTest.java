@@ -23,7 +23,7 @@ public class DataSourceTest {
 		
 		try(Connection conn = ds.getConnection()){
 			
-			System.out.println(conn);
+			System.out.println("DB 연결확인 : " + conn);
 			
 		}catch(Exception e) {
 			e.printStackTrace();

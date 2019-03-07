@@ -83,7 +83,6 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-
 		<!-- @Inject -->
 		<dependency>
 			<groupId>javax.inject</groupId>
@@ -92,11 +91,13 @@
 		</dependency>
 
 		<!-- Servlet -->
+		<!-- WAS없이 컨트롤러 실행하기 위해 version UP (2019.03.05) -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+		<!-- 09.03.05 -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
@@ -109,7 +110,7 @@
 			<version>1.2</version>
 		</dependency>
 
-		<!-- Test -->
+		<!-- Test를 위한 JUnit 버전 변경(2019.03.05) -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -120,41 +121,41 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.41</version>
+			<version>5.1.38</version>
 		</dependency>
-		<!-- MyBatis 연동 -->
+		<!-- mysql 연결 완료(2019.03.05) -->
+		<!-- MyBatis 라이브러리 추가 (4) -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>3.4.1</version>
 		</dependency>
+		<!-- mybatis(2019.03.05) -1 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.3.0</version>
 		</dependency>
+		<!-- mybatis-spring(2019.03.05) -2 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		<!-- spring-jdbc(2019.03.05) -3 -->
+		<!-- spring-test WAS 없이 mybatis 제대로 연동되었는지 확인 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		<!-- spring-test(2019.03.05) -4 -->
 		<!-- MyBatis 연동 End -->
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.8.4</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4 -->
-		<dependency>
-			<groupId>org.bgee.log4jdbc-log4j2</groupId>
-			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
-			<version>1.16</version>
 		</dependency>
 	</dependencies>
 	<build>

@@ -3,7 +3,6 @@
 <mapper namespace="org.todoList.mapper.UserMapper">
 
 	<insert id="joinMember">
-		insert into tbl_user 
-		values (#{user_id}, #{user_pw}, #{user_name}, #{user_email}, #{user_age}, #{user_gender}, #{user_job}, #{user_intro})
+		insert into tbl_user values (#{user_id}, #{user_pw}, #{user_name}, #{user_email}, #{user_age}, #{user_gender}, #{user_job}, #{user_intro})
 	</insert>
 </mapper>

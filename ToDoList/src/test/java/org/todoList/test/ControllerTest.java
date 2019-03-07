@@ -37,6 +37,6 @@ public class ControllerTest {
 	// 컨트롤러 TEST 메서드
 	@Test
 	public void controllerTEST() throws Exception{
-		mockMvc.perform(MockMvcRequestBuilders.get("/joinUS"));
+		mockMvc.perform(MockMvcRequestBuilders.get("/"));
 	}
 }

@@ -22,14 +22,14 @@ public class DAOTest {
 		// @Test 어노테이션 안 붙이면 java.lang.exception:no runnable methods 발생
 		// 이러한 익셉션이 생기면 안에 TEST 할 메서드가 없다는 걸 뜻합니다.
 		UserVO vo = new UserVO();
-		vo.setUser_id("tnsska2");
+		vo.setUser_id("ring3");
 		vo.setUser_pw("1234");
-		vo.setUser_name("순남");
-		vo.setUser_email("vnemftnsska2@naver.com");
-		vo.setUser_age(4);
+		vo.setUser_name("문경원");
+		vo.setUser_email("http://blog.naver.com/vnemftnsska2");
+		vo.setUser_age(33);
 		vo.setUser_gender("남자");
-		vo.setUser_job("강아지");
-		vo.setUser_intro("강아지라고 얕보다가 큰코 다친다!!");
+		vo.setUser_job("취준생");
+		vo.setUser_intro("순남이 주인입니다.");
 		
 		dao.joinMember(vo);
 	}
